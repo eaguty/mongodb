@@ -1,6 +1,8 @@
 import java.net.UnknownHostException;
 
 import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+
 
 public class MongoDBApp {
 
@@ -9,6 +11,10 @@ public class MongoDBApp {
 
 		MongoClient mongoClient = new MongoClient();
 		
+		MongoDatabase db = mongoClient.getDatabase("mediastream");
+		
+		
+		mongoClient.close();
 		
 	}
 
