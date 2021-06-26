@@ -17,7 +17,7 @@ import com.tvazteca.Borrado.document.Categories;
 
 public class ConsultaCategories {
 
-	private static final String GET_ALL_CATEGORIES = "https://platform.mediastre.am/api/category?token=12022ce044dd12084b5e70c33c05f551";
+	private static final String GET_ALL_CATEGORIES = "https://platform.mediastre.am/api/category";
 	static RestTemplate restTemplate = new RestTemplate();
 
 	public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class ConsultaCategories {
 
 		HttpHeaders headers = new HttpHeaders();
 		//headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		// headers.set("X-API-TOKEN", "7c8ab4f9bf5fd0eebd929f3eeaf1effb");
+	
 
 		Map<String, Object> map = new HashMap<>();
 		map.put("X-API-TOKEN", "12022ce044dd12084b5e70c33c05f551");
