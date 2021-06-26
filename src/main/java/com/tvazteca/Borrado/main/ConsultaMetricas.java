@@ -29,7 +29,7 @@ private static final String GET_ALL_ASSETS="https://metrics.mdstrm.com/outbound/
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		headers.set("X-API-TOKEN", "7c8ab4f9bf5fd0eebd929f3eeaf1effb");
+		
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("name", "duration_range_detail");
