@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class LlenadoAssets {
 	
-	private static final String GET_ALL_ASSETS="https://platform.mediastre.am/api/media?token=7c8ab4f9bf5fd0eebd929f3eeaf1effb&limit=2&type=video&lite=true";
+	private static final String GET_ALL_ASSETS="https://platform.mediastre.am/api/media?limit=2&type=video&lite=true";
 	
 	static RestTemplate restTemplate = new RestTemplate();
 	
@@ -27,7 +27,7 @@ public class LlenadoAssets {
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		//headers.set("X-api-token", "7c8ab4f9bf5fd0eebd929f3eeaf1effb");
+		
 		
 		
 		
