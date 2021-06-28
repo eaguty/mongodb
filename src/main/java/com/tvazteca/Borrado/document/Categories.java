@@ -2,25 +2,29 @@ package com.tvazteca.Borrado.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document
+@Document("categories")
 public class Categories {
 	@Id
 	private String _id;
+	@Field(name="name")
 	private String name;
-	private Parent parent;
-	private String type;
+	@Field(name="parent")
+	private ParentCategories parent;
+	@Field(name="date_created")
+	private String date_created;
 	
 	public Categories() {
 		
 	}
 	
-	public Categories(String _id, String name, Parent parent, String type) {
+	public Categories(String _id, String name, ParentCategories parent, String date_created) {
 		super();
 		this._id = _id;
 		this.name = name;
 		this.parent = parent;
-		this.type = type;
+		this.date_created = date_created;
 	}
 
 	public String get_id() {
@@ -39,47 +43,31 @@ public class Categories {
 		this.name = name;
 	}
 
-	public Parent getParent() {
+	public ParentCategories getParent() {
         return parent;
     }
-
-	public String getType() {
-		return type;
+	public void setParent(ParentCategories parent){
+		this.parent = parent;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public String getDate_created() {
+		return date_created;
 	}
-	
-	static class Parent {
-		private final String _id;
-        private final String name;
-        private final String date_created;
 
-       
-        public Parent(String _id, String name, String date_created) {
-        	this._id= _id;
-            this.name = name;
-            this.date_created = date_created;
-        }
-
-        public String _id() {
-            return _id;
-        }
-        
-        public String getName() {
-            return name;
-        }
-
-        public String getDate_created() {
-            return date_created;
-        }
-    }
+	public void setDate_created(String date_created) {
+		this.date_created = date_created;
+	}
 
 	@Override
 	public String toString() {
-		return "Categories [_id=" + _id + ", name=" + name + ", parent=" + parent + ", type=" + type + "]";
+		return "Categories [_id=" + _id + ", name=" + name + ", parent=" + parent + ", date_created=" + date_created
+				+ "]";
 	}
+	
+
+	
+
+	
 	
 	
 	
