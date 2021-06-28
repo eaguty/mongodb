@@ -45,6 +45,7 @@ public class CategoriesService {
 		
 		String token= appProps.getProperty("app.mediastream.deportes.token");
 		String uri= appProps.getProperty("app.mediastream.api.categoria");
+		
 		String GET_ALL_CATEGORIES = uri+"/?token="+token;
 		Categories category = new Categories();
 		HttpHeaders headers = new HttpHeaders();
